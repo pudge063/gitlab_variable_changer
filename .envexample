@@ -1,0 +1,5 @@
+ACCESS_TOKEN=youraccesstoken
+TARGET_GROUP=4
+GITLAB_URL=https://gitlab.example.com
+TARGET_VARIABLE=external_repo
+TARGET_VALUE=new_value
