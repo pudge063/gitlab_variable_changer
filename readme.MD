@@ -1,12 +1,11 @@
 ### Variable changer
 
-- **Create .env file** 
+-**Change gitlab url**
 ```
-ACCESS_TOKEN=youraccesstoken
-TARGET_GROUP=4
-GITLAB_URL=https://gitlab.example.com
-TARGET_VARIABLE=variable_name
-TARGET_VALUE=variable_target_value
+TARGET_VARIABLE=http://gitlab.com
+TARGET_VALUE=external_repo
+
+external_repo :== http://gitlab.com/repo_name
 ```
 
 - **Install project && python environment**
@@ -16,6 +15,23 @@ cd giltab_variable_changer
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+```
+
+- **Create .env file** 
+```
+ACCESS_TOKEN=youraccesstoken
+GITLAB_URL=https://gitlab.example.com
+TARGET_VARIABLE=http://gitlab.com
+TARGET_VALUE=variable_target_value
+TARGET_GROUP=4
+TARGET_GROUP_NAME=
+```
+
+- **Select target group by name or id**
+```
+TARGET_GROUP=4
+
+TARGET_GROUP_NAME=group_for_change
 ```
 
 - **Start script**
